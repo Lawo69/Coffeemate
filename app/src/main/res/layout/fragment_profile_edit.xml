@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="25dp"
+    android:paddingEnd="25dp"
+    tools:context=".ProfileEditFragment">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/profileImageAr"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_profile"
+                app:civ_border_color="@color/blue"
+                app:civ_border_width="5dp" />
+
+        </LinearLayout>
+
+        <!--Text: Input Fullname-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/profileImageAr"
+            android:id="@+id/fullnameTIL"
+            android:textColorHint="@color/grey"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/fullnameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:textColor="@color/grey"
+                android:text="Full name"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Text: Input Username-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/usernameTIL"
+            android:layout_below="@+id/fullnameTIL"
+            android:textColorHint="@color/grey">
+            <EditText
+                android:id="@+id/usernameEt"
+                android:inputType="text"
+                android:hint="Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppinsmedium" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Text: Input bio-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/bioTIL"
+            android:layout_below="@+id/usernameTIL"
+            android:textColorHint="@color/grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bio"
+                android:inputType="text"
+                android:hint="Bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppinsmedium" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Text: Input Date of Birth-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/dateOfBirthTIL"
+            android:layout_below="@+id/bioTIL"
+            android:textColorHint="@color/grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateOfBirth"
+                android:inputType="text"
+                android:hint="Date of Birth(dd/mm/yyy)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppinsmedium" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Text: Input Home Town-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/hometownTIL"
+            android:layout_below="@+id/dateOfBirthTIL"
+            android:textColorHint="@color/grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/hometown"
+                android:inputType="text"
+                android:hint="Home Town"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppinsmedium" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Text: Input Job-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/jobTIL"
+            android:layout_below="@+id/hometownTIL"
+            android:textColorHint="@color/grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/job"
+                android:inputType="text"
+                android:hint="Job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppinsmedium" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_below="@+id/jobTIL"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/blue"
+            android:text="Done"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/blue" />
+
+
+    </RelativeLayout>
+</ScrollView>

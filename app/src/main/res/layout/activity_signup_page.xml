@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@drawable/background"
+    tools:context=".SignupPage">
+
+    <!--Text: Signup-->
+    <TextView
+        android:id="@+id/signuptitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Signup"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!--Text: Input Fullname-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signuptitle"
+        android:id="@+id/fullnameTIL"
+        android:textColorHint="@color/grey"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:id="@+id/fullnameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_name"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/grey"
+            android:hint="Full name"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Text: Input Username-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/usernameTIL"
+        android:layout_below="@+id/fullnameTIL"
+        android:textColorHint="@color/grey">
+        <EditText
+            android:id="@+id/usernameEt"
+            android:inputType="text"
+            android:hint="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:drawableRight="@drawable/ic_user"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Text: Input Email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/usernameTIL"
+        android:id="@+id/emailTIL"
+        android:textColorHint="@color/grey">
+        <EditText
+            android:id="@+id/emailEt"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:drawableRight="@drawable/ic_mail"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--Text: Input Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/passwordTIL"
+        android:layout_below="@+id/emailTIL"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/grey"
+        android:textColorHint="@color/grey">
+        <EditText
+            android:id="@+id/passwordEt"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:drawableRight="@drawable/ic_name"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Button: Signup-->
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/passwordTIL"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/blue"
+        android:text="signup"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp" />
+
+    <!--Text: Click go to login page-->
+    <LinearLayout
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signupButton"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Already have account?"
+            android:textColor="@color/grey"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="  Login"
+            android:textColor="@color/blue"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

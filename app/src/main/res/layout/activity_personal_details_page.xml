@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@drawable/background"
+    tools:context=".PersonalDetailsPage">
+
+    <TextView
+        android:id="@+id/detailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile Details"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/blue"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/profileImageAr"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_profile"
+            app:civ_border_color="@color/blue"
+            app:civ_border_width="5dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/bioTIL"
+        android:layout_below="@+id/profileImageAr"
+        android:textColorHint="@color/grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bio"
+            android:inputType="text"
+            android:hint="Bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/dateOfBirthTIL"
+        android:layout_below="@+id/bioTIL"
+        android:textColorHint="@color/grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateOfBirth"
+            android:inputType="text"
+            android:hint="Date of Birth(dd/mm/yyy)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/hometownTIL"
+        android:layout_below="@+id/dateOfBirthTIL"
+        android:textColorHint="@color/grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hometown"
+            android:inputType="text"
+            android:hint="Home Town"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/jobTIL"
+        android:layout_below="@+id/hometownTIL"
+        android:textColorHint="@color/grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/job"
+            android:inputType="text"
+            android:hint="Job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="352dp"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/jobTIL">
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:onClick="checkButton"
+            android:text="Male"
+            android:textColor="@color/grey"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="93dp"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton"
+            android:text="Female"
+            android:textColor="@color/grey"
+            tools:ignore="OnClick,UsingOnClickInXml" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/uploadID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload ID Card"
+        android:textColor="@color/grey"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/radioGroup"/>
+
+    <LinearLayout
+        android:id="@+id/uploadfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uploadID">
+        <Button
+            android:id="@+id/file"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/ic_file"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            app:strokeColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/noFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="No Files"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:layout_below="@+id/file"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/agree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uploadfile">
+
+        <CheckBox
+            android:id="@+id/teamsAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="Agree with"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/uploadfile"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/teamsCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teams and Conditions"
+            android:paddingStart="5dp"
+            android:textColor="@color/blue"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/blue"
+        android:text="Done"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp"
+        app:strokeColor="@color/blue"
+        android:layout_below="@+id/agree"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

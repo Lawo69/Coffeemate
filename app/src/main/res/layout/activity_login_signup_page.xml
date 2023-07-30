@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:background="@drawable/background"
+    tools:context=".LoginSignupPage">
+
+    <!--Text: Title-->
+    <TextView
+        android:id="@+id/findnew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find new \nfriend nearby"
+        android:textColor="@color/blue"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="375dp" />
+
+    <!--Text: Description-->
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cofeemate is a place to find a friend to overcome loneliness. Find good friends and Enjoy."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp" />
+
+    <!--Button: Login-->
+
+    <!--Button: Signup-->
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/blue"
+        android:text="login"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp"
+        app:strokeColor="@color/blue" />
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="95dp"
+        android:backgroundTint="@color/blue"
+        android:text="signup"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp" />
+
+
+</RelativeLayout>

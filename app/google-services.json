@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "673441472280",
+    "project_id": "coffeemate-2",
+    "storage_bucket": "coffeemate-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673441472280:android:9e873f627af48804c5086d",
+        "android_client_info": {
+          "package_name": "com.example.coffeemate2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673441472280-fsk4cljkd64eovf8sp18m5ig14a2oe4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1EDiP3DZQpBaOKNjwb0h8iJmlbcB6jpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673441472280-fsk4cljkd64eovf8sp18m5ig14a2oe4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
