@@ -63,4 +63,4 @@ This project is open-source and available under the MIT License - see the [LICEN
 - Developed as part of a university project.
 - Thank you for using Coffeemate and helping us connect people and combat loneliness.
 
-![Coffeemate Logo](/images/logo.png)
+![Coffeemate Logo](cover.png)
